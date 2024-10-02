@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 from typing import List
 
-HYPEN_E_DOT_ = "-e ."  # Define your marker here
+HYPEN_E_DOT_ = "-e ."  # Marker for editable installs
 
 def get_requirements(file_path: str) -> List[str]:
     """
@@ -30,5 +30,6 @@ setup(
     author='Satyam',
     author_email='Satyamrajam03@gmail.com',
     packages=find_packages(),  # Automatically find packages
-    install_requires=get_requirements('requirements.txt')  # Read requirements from file
+    install_requires=get_requirements('requirements.txt'),  # Read requirements from file
+    python_requires='>=3.6',  # Specify Python version compatibility (optional)
 )
